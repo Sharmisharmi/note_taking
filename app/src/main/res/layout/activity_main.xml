@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.5"
+        android:layout_marginVertical="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Notes"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="24dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="end"
+            android:layout_gravity="center"
+            android:layout_marginRight="3dp">
+        <ImageView
+            android:id="@+id/search_iv"
+            android:layout_width="25dp"
+            android:layout_height="23dp"
+            android:src="@drawable/search"
+            android:tint="@color/secondary_blue"
+            android:layout_gravity="bottom"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginVertical="15dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/back_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/round_bg"
+            android:backgroundTint="#95BFD0FB"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/back"
+                android:layout_gravity="center"
+                android:tint="@color/secondary_blue"
+                android:layout_margin="12dp"/>
+
+
+
+        </LinearLayout>
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:hint="Search..."
+        android:textColorHint="@color/secondary_blue"
+        android:textColor="@color/secondary_blue"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="13dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="#95BFD0FB"
+        android:layout_marginLeft="10dp"
+        android:paddingHorizontal="10dp"/>
+
+    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/grid_view"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:src="@drawable/grid"
+            android:visibility="gone"
+            android:layout_gravity="end"/>
+        <ImageView
+            android:id="@+id/list_view"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:visibility="visible"
+            android:src="@drawable/view_list_24"
+            android:layout_gravity="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_notes_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/notes_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="#3C71F6"
+        android:elevation="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/add_icon"
+            android:tint="@color/white"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+    <com.nitish.typewriterview.TypeWriterView
+        android:id="@+id/typeWriterView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Your Note is Empty"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

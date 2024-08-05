@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="10dp"
+    tools:context=".view.AddNotesActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginVertical="15dp"
+>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="33dp"
+                android:layout_height="28dp"
+                android:src="@drawable/arrow_back_24"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Notes"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="45dp">
+
+    <EditText
+        android:id="@+id/title_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="16dp"
+        android:textCursorDrawable="@drawable/cursor_color"/>
+
+    <EditText
+        android:id="@+id/content_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="Type here.."
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="14dp"
+        android:layout_marginTop="25dp"
+        android:textCursorDrawable="@drawable/cursor_color"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/save_Card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/secondary_blue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="4dp"/>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
